@@ -4,7 +4,7 @@ import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
  * Сортировка Шелла (англ. Shell sort).
- *
+ *тест
  * <p>Алгоритм сортировки, являющийся усовершенствованным
  * вариантом сортировки вставками. Идея метода Шелла состоит
  * в сравнении элементов, стоящих не только рядом, но и на
@@ -20,7 +20,22 @@ public class ShellSort implements Sort {
     /**
      * {@inheritDoc}
      */
+    @Override
     public void sort(int[] array) {
+        System.out.print("Сортировка методом Шелла: ");
+        for(int step = array.length/2; step > 0 ; step /=2){
+            for (int i = step ; i < array.length;i++ ){
+                for (int k = i - array.length; k >= 0 && array[k]>array [k + step] ; k -= step) {
+                    int tmp = array [k];
+                    array [k] = array [k + step];
+                    array [k + step] = tmp;
+                }
+          System.out.print(array[i] + " ");  
+        }
+            
+        }
+        
+       
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
