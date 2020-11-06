@@ -16,9 +16,15 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  */
 public class RandomInitializer implements Initializer {
     
-    public RandomInitializer(){
-        
+    int min ; 
+    int max ; 
+
+    public RandomInitializer(int min, int max) {
+        this.min = min;
+        this.max = max;
     }
+    
+  
     
     /**
      * Выполняет инициализацию массива, значениями
@@ -28,8 +34,7 @@ public class RandomInitializer implements Initializer {
      */
     @Override
     public void initialize(int[] array) {
-        int min = -50 ;
-        int max = 50 ;
+      
         int diff = max;
         Random random = new Random();
         

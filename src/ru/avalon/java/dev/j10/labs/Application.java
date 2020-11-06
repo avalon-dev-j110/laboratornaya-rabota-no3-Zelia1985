@@ -17,7 +17,7 @@ public class Application {
         
         Application.SumMass(myArray);
         
-        RandomInitializer random = new RandomInitializer();
+        RandomInitializer random = new RandomInitializer(-50,50);
         random.initialize(myArray);
         
         BubbleSort bubble = new BubbleSort();
